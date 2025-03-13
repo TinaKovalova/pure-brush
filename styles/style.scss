@@ -1,0 +1,34 @@
+@use "sass:math";
+@import "fonts";
+@import "reset";
+@import "variables";
+@import "mixins";
+
+body {
+    font-family: "Mulish", sans-serif;
+    background-color: $whiteSmokeColor;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+.wrapper > main {
+    flex-grow: 1;
+}
+
+[class$="__container"] {
+    max-width: toRem(1307); //1251
+    padding-inline: toRem(28);
+    margin: 0 auto;
+    @media (max-width: $smallMobile) {
+        padding-inline: toRem(15);
+    }
+}
+
+@import "common";
+@import "header";
+@import "main";
+@import "footer";

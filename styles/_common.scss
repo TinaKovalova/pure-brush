@@ -1,0 +1,53 @@
+.button {
+    padding: toRem(23) toRem(30);
+    font-size: toRem(14);
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: toRem(1.35);
+    flex-shrink: 0;
+    text-align: center;
+
+    &.button--white {
+        background-color: #ffffff;
+        color: #000000;
+    }
+    &.button--green {
+        background-color: $greenColor;
+        color: #ffffff;
+    }
+    &.button--small {
+        padding-block-start: toRem(15);
+        padding-block-end: toRem(16);
+        @media (max-width: $smallMobile) {
+            padding: toRem(12) toRem(18) toRem(13);
+        }
+    }
+}
+
+.content-block {
+    max-width: toRem(683);
+    background-color: $beigeColor;
+    &__wrapper {
+        padding: toRem(120) toRem(113);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: toRem(21);
+    }
+    // .content-block__header
+
+    &__header {
+        font-size: toRem(36);
+        line-height: 1.17;
+        text-transform: capitalize;
+        margin-bottom: toRem(21);
+    }
+
+    // .content-block__text
+
+    &__text {
+        line-height: 1.75;
+        max-width: toRem(418);
+    }
+   
+}
