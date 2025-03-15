@@ -1,7 +1,6 @@
 .hero {
     position: relative;
     min-height: toRem(586);
-    background-color: aquamarine;
     &::after {
         content: "";
         width: 100%;
@@ -71,7 +70,7 @@
     &__content {
         position: relative;
         z-index: 2;
-        left: toRem(-28);
+        // left: toRem(-28);
         color: #ffffff;
         background-color: transparent;
         & .content-block__wrapper {

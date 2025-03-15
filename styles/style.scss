@@ -20,8 +20,19 @@ body {
 }
 
 [class$="__container"] {
-    max-width: toRem(1307); //1251
-    padding-inline: toRem(28);
+    max-width: toRem(1365); //1251
+    padding-inline: toRem(57);
+    margin: 0 auto;
+    @media (max-width: $mobile) {
+        padding-inline: toRem(28);
+    }
+    @media (max-width: $smallMobile) {
+        padding-inline: toRem(15);
+    }
+}
+[class$="__container-max"] {
+    max-width: toRem(1386);
+    padding-inline: toRem(10);
     margin: 0 auto;
     @media (max-width: $smallMobile) {
         padding-inline: toRem(15);

@@ -143,12 +143,28 @@ body {
 }
 
 [class$=__container] {
-  max-width: 81.6875rem;
-  padding-inline: 1.75rem;
+  max-width: 85.3125rem;
+  padding-inline: 3.5625rem;
   margin: 0 auto;
+}
+@media (max-width: 767.98px) {
+  [class$=__container] {
+    padding-inline: 1.75rem;
+  }
 }
 @media (max-width: 479.98px) {
   [class$=__container] {
+    padding-inline: 0.9375rem;
+  }
+}
+
+[class$=__container-max] {
+  max-width: 86.625rem;
+  padding-inline: 0.625rem;
+  margin: 0 auto;
+}
+@media (max-width: 479.98px) {
+  [class$=__container-max] {
     padding-inline: 0.9375rem;
   }
 }
@@ -296,7 +312,6 @@ body {
 .hero {
   position: relative;
   min-height: 36.625rem;
-  background-color: aquamarine;
 }
 .hero::after {
   content: "";
@@ -375,7 +390,6 @@ body {
 .hero__content {
   position: relative;
   z-index: 2;
-  left: -1.75rem;
   color: #ffffff;
   background-color: transparent;
 }
