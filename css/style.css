@@ -228,6 +228,41 @@ body {
   max-width: 26.125rem;
 }
 
+.brand-card {
+  padding-block: 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 0.9375rem;
+}
+.brand-card__image-wrapper {
+  height: 2.625rem;
+  width: 100%;
+}
+.brand-card__image {
+  width: 100%;
+  max-height: 100%;
+  -o-object-fit: none;
+     object-fit: none;
+  -o-object-position: center;
+     object-position: center;
+}
+.brand-card__text {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  text-align: center;
+}
+
 .header__container {
   padding-block: 1.625rem 1.6875rem;
   display: -webkit-box;
@@ -459,4 +494,69 @@ body {
   .hero__content .content-block__text {
     max-width: 100%;
   }
+}
+
+.brands__container {
+  -webkit-padding-before: 3.9375rem;
+          padding-block-start: 3.9375rem;
+  -webkit-padding-after: 5rem;
+          padding-block-end: 5rem;
+}
+@media (min-width: 37.5rem) {
+  .brands__container {
+    padding-inline: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .brands__container {
+    -webkit-padding-before: 3rem;
+            padding-block-start: 3rem;
+    -webkit-padding-after: 3.4375rem;
+            padding-block-end: 3.4375rem;
+  }
+}
+@media (max-width: 479.98px) {
+  .brands__container {
+    -webkit-padding-before: 3.1875rem;
+            padding-block-start: 3.1875rem;
+    -webkit-padding-after: 2.75rem;
+            padding-block-end: 2.75rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .brands__item .brand-card__text {
+    max-width: 19rem;
+  }
+}
+@media (max-width: 479.98px) {
+  .brands__item .brand-card__text {
+    max-width: 13.6875rem;
+  }
+}
+.brands .swiper {
+  max-width: 59.125rem;
+  margin: 0 auto;
+  -webkit-padding-after: 2.8125rem;
+          padding-block-end: 2.8125rem;
+}
+@media (max-width: 479.98px) {
+  .brands .swiper {
+    -webkit-padding-after: 4.125rem;
+            padding-block-end: 4.125rem;
+  }
+}
+.brands .swiper-wrapper {
+  width: 100%;
+}
+.brands .swiper-slide {
+  width: 16.5961945032%;
+  min-width: 9.8125rem;
+}
+.brands .swiper-pagination-bullet {
+  width: 0.5625rem;
+  height: 0.5625rem;
+  --swiper-pagination-bullet-horizontal-gap: 1.31rem;
+}
+.brands .swiper-pagination-bullet-active {
+  background-color: #104b4f;
 }

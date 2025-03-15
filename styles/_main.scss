@@ -134,3 +134,66 @@
         }
     }
 }
+
+//Brands--------------------
+
+.brands {
+    // .brands__container
+
+    &__container {
+        padding-block-start: toRem(63);
+        padding-block-end: toRem(80);
+
+        @media (min-width: toRem(600)) {
+            padding-inline: 0;
+        }
+        @media (max-width: $mobile) {
+            padding-block-start: toRem(48);
+            padding-block-end: toRem(55);
+        }
+        @media (max-width: $smallMobile) {
+            padding-block-start: toRem(51);
+            padding-block-end: toRem(44);
+        }
+    }
+
+    // .brands__item
+
+    &__item {
+        & .brand-card__text {
+            @media (max-width: $mobile) {
+                max-width: toRem(304);
+            }
+            @media (max-width: $smallMobile) {
+                max-width: toRem(219);
+            }
+        }
+    }
+
+    //swiper-----
+    & .swiper {
+        max-width: toRem(946);
+        margin: 0 auto;
+        padding-block-end: toRem(45);
+        @media (max-width: $smallMobile) {
+            padding-block-end: toRem(66);
+        }
+    }
+    & .swiper-wrapper {
+        width: 100%;
+    }
+    & .swiper-slide {
+        width: toPercent(157, 946);
+        min-width: toRem(157);
+    }
+    & .swiper-pagination {
+    }
+    & .swiper-pagination-bullet {
+        width: toRem(9);
+        height: toRem(9);
+        --swiper-pagination-bullet-horizontal-gap: 1.31rem;
+    }
+    & .swiper-pagination-bullet-active {
+        background-color: $greenColor;
+    }
+}
