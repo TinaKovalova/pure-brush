@@ -162,11 +162,6 @@ body {
   max-width: 85.375rem;
   margin: 0 auto;
 }
-@media (max-width: 479.98px) {
-  [class$=__container-max] {
-    padding-inline: 0.9375rem;
-  }
-}
 
 .button {
   padding: 1.4375rem 1.875rem;
@@ -272,6 +267,60 @@ body {
   font-size: 0.875rem;
   line-height: 1.43;
   text-align: center;
+}
+
+.section-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-inline: 2.1875rem;
+  row-gap: 1rem;
+}
+@media (min-width: 479.98px) and (max-width: 767.98px) {
+  .section-header {
+    row-gap: 1.5rem;
+  }
+}
+@media (max-width: 479.98px) {
+  .section-header {
+    padding-inline: 1.3125rem;
+  }
+}
+.section-header__title {
+  text-align: center;
+  font-size: 2.125rem;
+  line-height: 1.176;
+}
+@media (max-width: 767.98px) {
+  .section-header__title {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+}
+.section-header__text {
+  text-align: center;
+  line-height: 1.75;
+  max-width: 21.6875rem;
+}
+.section-header__text:not(:last-child) {
+  margin-bottom: 1.6875rem;
+}
+@media (max-width: 767.98px) {
+  .section-header__text:not(:last-child) {
+    margin-bottom: 0.9375rem;
+  }
+}
+@media (max-width: 479.98px) {
+  .section-header__text:not(:last-child) {
+    margin-bottom: 0.625rem;
+  }
 }
 
 .header__container {
@@ -785,6 +834,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-column-gap: 0.25rem;
+     -moz-column-gap: 0.25rem;
+          column-gap: 0.25rem;
   margin-bottom: 3.3125rem;
 }
 @media (max-width: 767.98px) {
@@ -818,4 +870,126 @@ body {
   font-size: 0.875rem;
   line-height: 1.428;
   text-align: center;
+}
+
+.join-us {
+  padding-block: 5.75rem;
+}
+@media (max-width: 767.98px) {
+  .join-us {
+    padding-block: 3.75rem;
+  }
+}
+@media (max-width: 479.98px) {
+  .join-us {
+    padding-block: 2.75rem;
+  }
+}
+.join-us__container-max:has(.section-header):not(:last-child) {
+  margin-bottom: 2.6875rem;
+}
+@media (max-width: 767.98px) {
+  .join-us__container-max:has(.section-header):not(:last-child) {
+    margin-bottom: 2.4375rem;
+  }
+}
+@media (max-width: 479.98px) {
+  .join-us__container-max:has(.section-header):not(:last-child) {
+    margin-bottom: 2.25rem;
+  }
+}
+.join-us__container-max:has(.join-us__link) {
+  text-align: center;
+}
+.join-us__collage {
+  margin: 0 auto;
+}
+.join-us__collage:not(:last-child) {
+  margin-bottom: 3.4375rem;
+}
+@media (max-width: 767.98px) {
+  .join-us__collage:not(:last-child) {
+    margin-bottom: 1.6875rem;
+  }
+}
+@media (max-width: 479.98px) {
+  .join-us__collage:not(:last-child) {
+    margin-bottom: 1.4375rem;
+  }
+}
+.join-us__link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-column-gap: 1rem;
+     -moz-column-gap: 1rem;
+          column-gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1.75;
+}
+.join-us__link span::before {
+  font-size: 1.125rem;
+  line-height: 1;
+  color: #23575a;
+}
+@media (max-width: 767.98px) {
+  .join-us__link {
+    letter-spacing: 0.02775rem;
+    -webkit-column-gap: 0.625rem;
+       -moz-column-gap: 0.625rem;
+            column-gap: 0.625rem;
+  }
+}
+@media (max-width: 479.98px) {
+  .join-us__link {
+    font-size: 0.875rem;
+  }
+}
+
+.collage {
+  width: 66.6910688141%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(9.5625rem, 1fr));
+  gap: 1.6875rem 1.9375rem;
+}
+@media (max-width: 767.98px) {
+  .collage {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 0.875rem;
+  }
+}
+.collage__item {
+  aspect-ratio: 283/285;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 767.98px) {
+  .collage__item {
+    aspect-ratio: 153/154;
+  }
+}
+@media (hover) {
+  .collage__item:hover .collage__image {
+    -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+}
+.collage__link {
+  width: 100%;
+  height: 100%;
+}
+.collage__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }

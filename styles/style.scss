@@ -33,9 +33,9 @@ body {
 [class$="__container-max"] {
     max-width: toRem(1366);
     margin: 0 auto;
-    @media (max-width: $smallMobile) {
-        padding-inline: toRem(15);
-    }
+    // @media (max-width: $smallMobile) {
+    //     padding-inline: toRem(15);
+    // }
 }
 
 @import "common";

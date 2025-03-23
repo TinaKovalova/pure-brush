@@ -394,6 +394,7 @@
     &__rate {
         display: flex;
         justify-content: center;
+        column-gap: toRem(4);
         margin-bottom: toRem(53);
         @media (max-width: $mobile) {
             margin-bottom: toRem(40);
@@ -430,5 +431,114 @@
         font-size: toRem(14);
         line-height: 1.428;
         text-align: center;
+    }
+}
+//Join us -------------------------------------
+
+.join-us {
+    padding-block: toRem(92);
+    @media (max-width: $mobile) {
+        padding-block: toRem(60);
+    }
+    @media (max-width: $smallMobile) {
+        padding-block: toRem(44);
+    }
+    // .join-us__container
+
+    &__container-max {
+        &:has(.section-header):not(:last-child) {
+            margin-bottom: toRem(43);
+            @media (max-width: $mobile) {
+                margin-bottom: toRem(39);
+            }
+            @media (max-width: $smallMobile) {
+                margin-bottom: toRem(36);
+            }
+        }
+        &:has(.join-us__link) {
+            text-align: center;
+        }
+    }
+
+    // .join-us__collage
+
+    &__collage {
+        margin: 0 auto;
+        &:not(:last-child) {
+            margin-bottom: toRem(55);
+            @media (max-width: $mobile) {
+                margin-bottom: toRem(27);
+            }
+            @media (max-width: $smallMobile) {
+                margin-bottom: toRem(23);
+            }
+        }
+    }
+    //join-us__link
+    &__link {
+        display: inline-flex;
+        column-gap: toRem(16);
+        align-items: center;
+        line-height: 1.75;
+
+        & span::before {
+            font-size: toRem(18);
+            line-height: 1;
+            color: #23575a;
+        }
+        @media (max-width: $mobile) {
+            letter-spacing: toRem(0.444);
+            column-gap: toRem(10);
+        }
+        @media (max-width: $smallMobile) {
+            font-size: toRem(14);
+        }
+    }
+}
+.collage {
+    width: toPercent(911, 1366);
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(toRem(153), 1fr));
+    gap: toRem(27) toRem(31);
+
+    @media (max-width: $mobile) {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        gap: toRem(14);
+    }
+    // .collage__item
+
+    &__item {
+        aspect-ratio: 283 / 285;
+        position: relative;
+        overflow: hidden;
+        @media (max-width: $mobile) {
+            aspect-ratio: 153 / 154;
+        }
+        @media (hover) {
+            &:hover {
+                & .collage__image {
+                    transform: scale(1.02);
+                }
+            }
+        }
+    }
+
+    // .collage__link
+
+    &__link {
+        width: 100%;
+        height: 100%;
+    }
+
+    // .collage__image
+
+    &__image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s;
     }
 }
