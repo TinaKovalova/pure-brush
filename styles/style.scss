@@ -4,7 +4,6 @@
 @import "variables";
 @import "mixins";
 
-
 body {
     font-family: "Mulish", sans-serif;
     background-color: $whiteSmokeColor;
@@ -32,8 +31,7 @@ body {
     }
 }
 [class$="__container-max"] {
-    max-width: toRem(1386);
-    padding-inline: toRem(10);
+    max-width: toRem(1366);
     margin: 0 auto;
     @media (max-width: $smallMobile) {
         padding-inline: toRem(15);
