@@ -178,6 +178,7 @@ body {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   text-align: center;
+  border-image-width: 0;
 }
 .button.button--white, .hero__content.content-block .button {
   background-color: #ffffff;
@@ -200,11 +201,10 @@ body {
 }
 
 .content-block {
-  max-width: 42.6875rem;
   background-color: #F0EBE5;
 }
 .content-block__wrapper {
-  padding: 7.5rem 7.0625rem;
+  padding: 7.5rem 16.5446559297%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,14 +218,26 @@ body {
   row-gap: 1.3125rem;
 }
 .content-block__header {
-  font-size: 2.25rem;
-  line-height: 1.17;
+  font-size: 2.125rem;
+  line-height: 1.176;
   text-transform: capitalize;
-  margin-bottom: 1.3125rem;
 }
 .content-block__text {
   line-height: 1.75;
   max-width: 26.125rem;
+}
+@media (min-width: 479.98px) and (max-width: 767.98px) {
+  .content-block .button {
+    font-size: 1rem;
+    line-height: 1.25;
+    letter-spacing: 0.0964375rem;
+  }
+}
+@media (max-width: 479.98px) {
+  .content-block .button {
+    font-size: 0.875rem;
+    line-height: 1.28;
+  }
 }
 
 .brand-card {
@@ -483,6 +495,7 @@ body {
     width: 100%;
     background-color: #104b4f;
     color: #ffffff;
+    font-size: 1rem;
   }
 }
 @media (max-width: 767.98px) {
@@ -559,4 +572,118 @@ body {
 }
 .brands .swiper-pagination-bullet-active {
   background-color: #104b4f;
+}
+
+.advantages__container-max {
+  padding-inline: 0;
+}
+.advantages__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.advantages__row:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+@media (max-width: 767.98px) {
+  .advantages__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-preferred-size: 24.9375rem;
+        flex-basis: 24.9375rem;
+    max-width: 100%;
+  }
+  .advantages__row:nth-child(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.advantages__column-img, .advantages__column-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 42.6875rem;
+          flex: 1 1 42.6875rem;
+  max-width: 50%;
+}
+@media (max-width: 767.98px) {
+  .advantages__column-img, .advantages__column-content {
+    max-width: 100%;
+  }
+}
+.advantages__column-img {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  overflow: hidden;
+  aspect-ratio: 683/458;
+}
+@media (max-width: 767.98px) {
+  .advantages__column-img {
+    aspect-ratio: 600/402;
+  }
+}
+@media (max-width: 479.98px) {
+  .advantages__column-img {
+    aspect-ratio: 320/214;
+  }
+}
+.advantages__img {
+  min-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 767.98px) {
+  .advantages__column-content {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
+}
+.advantages__content {
+  min-height: 100%;
+}
+.advantages__content .content-block__text:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+@media (max-width: 767.98px) {
+  .advantages__content .content-block__wrapper {
+    padding: 2.1875rem 14.2020497804% 4.5625rem;
+    row-gap: 0.4375rem;
+  }
+  .advantages__content .content-block__header {
+    font-size: 1.75rem;
+    line-height: 1.25;
+  }
+  .advantages__content .content-block__text {
+    letter-spacing: 0.02775rem;
+  }
+  .advantages__content .content-block__text:not(:last-child) {
+    margin-bottom: 0.5625rem;
+  }
+}
+@media (max-width: 479.98px) {
+  .advantages__content .content-block__wrapper {
+    padding: 2.5rem 1.125rem 3rem;
+    row-gap: 1rem;
+  }
+  .advantages__content .content-block__header:not(:last-child) {
+    margin-bottom: 0.625rem;
+  }
+  .advantages__content .content-block__text {
+    letter-spacing: normal;
+  }
+  .advantages__content .content-block__text:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .advantages__content .button {
+    -webkit-padding-before: 0.9375rem;
+            padding-block-start: 0.9375rem;
+    -webkit-padding-after: 1rem;
+            padding-block-end: 1rem;
+  }
 }

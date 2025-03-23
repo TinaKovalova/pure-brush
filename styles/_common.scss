@@ -6,6 +6,7 @@
     letter-spacing: toRem(1.35);
     flex-shrink: 0;
     text-align: center;
+    border-image-width: 0;
 
     &.button--white {
         background-color: #ffffff;
@@ -25,10 +26,9 @@
 }
 
 .content-block {
-    max-width: toRem(683);
     background-color: $beigeColor;
     &__wrapper {
-        padding: toRem(120) toRem(113);
+        padding: toRem(120) toPercent(113, 683);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -37,10 +37,9 @@
     // .content-block__header
 
     &__header {
-        font-size: toRem(36);
-        line-height: 1.17;
+        font-size: toRem(34);
+        line-height: 1.176;
         text-transform: capitalize;
-        margin-bottom: toRem(21);
     }
 
     // .content-block__text
@@ -49,10 +48,20 @@
         line-height: 1.75;
         max-width: toRem(418);
     }
+    & .button {
+        @media (min-width: $smallMobile) and (max-width: $mobile) {
+            font-size: toRem(16);
+            line-height: 1.25;
+            letter-spacing: toRem(1.543);
+        }
+        @media (max-width: $smallMobile) {
+            font-size: toRem(14);
+            line-height: 1.28;
+        }
+    }
 }
 
 .brand-card {
-   
     padding-block: toRem(10);
     display: flex;
     flex-direction: column;
@@ -84,5 +93,3 @@
         text-align: center;
     }
 }
-
-
