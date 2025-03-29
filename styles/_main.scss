@@ -640,7 +640,9 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: top center;
         aspect-ratio: 299 / 299;
+
         @media (max-width: $mobile) {
             aspect-ratio: 388 / 390;
         }
@@ -728,6 +730,98 @@
         @media (max-width: $smallMobile) {
             padding-block-start: toRem(15);
             padding-block-end: toRem(16);
+        }
+    }
+}
+
+//Buy-----------------------------------------
+.buy {
+    min-height: toRem(579);
+    position: relative;
+    @media (max-width: $smallMobile) {
+        min-height: toRem(420);
+        display: flex;
+    }
+    // .buy__image-wrapper
+
+    &__image-wrapper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    // .buy__background
+
+    &__background {
+        width: 100%;
+        min-height: 100%;
+        aspect-ratio: 1366 / 579;
+        object-fit: cover;
+        @media (min-width: toRem(1700)) {
+            object-position: center -6vw;
+        }
+    }
+
+    // .buy__container-max
+
+    &__container-max {
+        @media (max-width: $smallMobile) {
+            padding-inline: toRem(20);
+            display: flex;
+        }
+    }
+
+    // .buy__content
+
+    &__content {
+        color: #ffffff;
+        position: relative;
+        background-color: transparent;
+
+        & .content-block__wrapper {
+            padding-inline: toRem(55);
+            padding-block: toRem(72);
+            @media (max-width: $mobile) {
+                padding-block: toRem(60);
+                align-items: center;
+            }
+            @media (max-width: $smallMobile) {
+                padding-inline: 0;
+                padding-block: toRem(44);
+                min-height: 100%;
+            }
+        }
+        & .content-block__header {
+            @media (max-width: $mobile) {
+                font-size: toRem(28);
+                line-height: 1.25;
+            }
+        }
+        & .content-block__text {
+            max-width: toRem(500);
+            @media (max-width: $mobile) {
+                max-width: toRem(337);
+                text-align: center;
+            }
+            @media (max-width: $smallMobile) {
+                flex-grow: 1;
+            }
+        }
+        & .button {
+            padding-inline: toRem(64);
+            @media (max-width: $mobile) {
+                font-size: toRem(14);
+                line-height: 1.357;
+                letter-spacing: toRem(1.35);
+            }
+            @media (max-width: $smallMobile) {
+                padding-block-start: toRem(15);
+                padding-block-end: toRem(16);
+                padding-inline: toRem(54);
+                letter-spacing: normal;
+            }
         }
     }
 }
