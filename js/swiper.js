@@ -42,3 +42,20 @@ const swiperReviews = new Swiper(".swiper-reviews", {
     },
   },
 });
+const swiperBestSellers = new Swiper(".swiper-best-sellers", {
+  spaceBetween: 75,
+  speed: 2000,
+  grabCursor: true,
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+   
+    601: {
+      spaceBetween: 30,
+      slidesPerView: "auto",
+    },
+  },
+});

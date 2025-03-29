@@ -124,7 +124,7 @@
     &__text {
         text-align: center;
         line-height: 1.75;
-        max-width: toRem(347);
+
         &:not(:last-child) {
             margin-bottom: toRem(27);
             @media (max-width: $mobile) {
