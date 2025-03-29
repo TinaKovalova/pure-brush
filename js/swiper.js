@@ -11,6 +11,10 @@ const swiper = new Swiper(".swiper", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+    type: "bullets",
+    renderBullet: function (index, className) {
+      return index < 3 ? `<span class="${className}"></span>` : "";
+    },
   },
 
   breakpoints: {
@@ -35,6 +39,10 @@ const swiperReviews = new Swiper(".swiper-reviews", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+    type: "bullets",
+    renderBullet: function (index, className) {
+      return index < 3 ? `<span class="${className}"></span>` : "";
+    },
   },
   breakpoints: {
     600: {
@@ -44,15 +52,21 @@ const swiperReviews = new Swiper(".swiper-reviews", {
 });
 const swiperBestSellers = new Swiper(".swiper-best-sellers", {
   spaceBetween: 75,
+  centerInsufficientSlides:true,
   speed: 2000,
   grabCursor: true,
+  // autoHeight:true,
 
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+    type: 'bullets',
+    renderBullet: function (index, className) {
+      return index<3?`<span class="${className}"></span>`:''
+    },
   },
+
   breakpoints: {
-   
     601: {
       spaceBetween: 30,
       slidesPerView: "auto",
