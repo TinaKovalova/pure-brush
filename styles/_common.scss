@@ -1,9 +1,57 @@
+.logo {
+    font-size: toRem(34);
+    font-weight: 500;
+    line-height: 1.68;
+    @media (max-width: $tablet) {
+        font-size: toRem(28);
+        line-height: 2.03;
+    }
+    @media (max-width: $smallMobile) {
+        font-size: toRem(20);
+        line-height: 1.75;
+    }
+}
+.navigation {
+    flex-grow: 1;
+
+    // .navigation__list
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-self: flex-end;
+        gap: toRem(20) toRem(80);
+        @media (max-width: $tablet) {
+            column-gap: toRem(44);
+        }
+    }
+
+    // .navigation__item
+
+    &__item {
+        font-weight: 500;
+        line-height: 1.75;
+    }
+
+    // .navigation__link
+
+    &__link {
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+}
+.burger-btn {
+    display: none;
+}
+
 .button {
     padding: toRem(23) toRem(30);
     font-size: toRem(14);
     font-weight: 600;
     line-height: 1.35;
     letter-spacing: toRem(1.35);
+    text-transform: capitalize;
     flex-shrink: 0;
     text-align: center;
     border-image-width: 0;

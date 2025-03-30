@@ -759,9 +759,6 @@
         min-height: 100%;
         aspect-ratio: 1366 / 579;
         object-fit: cover;
-        @media (min-width: toRem(1700)) {
-            object-position: center -6vw;
-        }
     }
 
     // .buy__container-max
@@ -811,6 +808,10 @@
         }
         & .button {
             padding-inline: toRem(64);
+            text-transform: none;
+            &::first-letter {
+                text-transform: uppercase;
+            }
             @media (max-width: $mobile) {
                 font-size: toRem(14);
                 line-height: 1.357;
