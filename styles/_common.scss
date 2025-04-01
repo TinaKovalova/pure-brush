@@ -36,6 +36,7 @@
     // .navigation__link
 
     &__link {
+        @include underline-hover($greenColor, 0.4s);
         &::first-letter {
             text-transform: uppercase;
         }
@@ -54,7 +55,11 @@
     text-transform: capitalize;
     flex-shrink: 0;
     text-align: center;
-    border-image-width: 0;
+    position: relative;
+    will-change: color, background-color;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
 
     &.button--white {
         background-color: #ffffff;
@@ -69,6 +74,12 @@
         padding-block-end: toRem(16);
         @media (max-width: $smallMobile) {
             padding: toRem(12) toRem(18) toRem(13);
+        }
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            color: #ffffff;
+            background-color: #8d7e70;
         }
     }
 }

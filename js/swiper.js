@@ -55,8 +55,7 @@ const swiperBestSellers = new Swiper(".swiper-best-sellers", {
   centerInsufficientSlides:true,
   speed: 2000,
   grabCursor: true,
-  // autoHeight:true,
-
+  
   pagination: {
     el: ".swiper-pagination",
     clickable: true,

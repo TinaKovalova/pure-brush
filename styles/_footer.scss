@@ -108,9 +108,10 @@
 
     &__input {
         font-size: toRem(14);
+        height: toRem(65);
         font-weight: 600;
         line-height: 1.357;
-        padding: toRem(23);
+        padding-inline: toRem(23);
         border: toRem(1) solid $greenColor;
         @media (max-width: $mobile) {
             padding-inline: toRem(28);
@@ -120,6 +121,7 @@
 }
 
 .social {
+    align-self: flex-end;
     display: flex;
     align-items: center;
     column-gap: toRem(22);
@@ -133,5 +135,12 @@
     // .social__link
 
     &__link {
+        will-change: color;
+        transition: color 0.3s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $greenColor;
+            }
+        }
     }
 }
