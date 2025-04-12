@@ -537,7 +537,7 @@
         position: relative;
         overflow: hidden;
         will-change: transform;
-        transition-property:  opacity, border-radius;
+        transition-property: opacity, border-radius;
         transition-timing-function: ease-in-out;
         transition-duration: 0.5s;
         @for $i from 1 through 6 {
