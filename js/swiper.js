@@ -52,16 +52,17 @@ const swiperReviews = new Swiper(".swiper-reviews", {
 });
 const swiperBestSellers = new Swiper(".swiper-best-sellers", {
   spaceBetween: 75,
-  centerInsufficientSlides:true,
+  centerInsufficientSlides: true,
   speed: 2000,
   grabCursor: true,
-  
+  loop: true,
+
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-    type: 'bullets',
+    type: "bullets",
     renderBullet: function (index, className) {
-      return index<3?`<span class="${className}"></span>`:''
+      return index < 3 ? `<span class="${className}"></span>` : "";
     },
   },
 

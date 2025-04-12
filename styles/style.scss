@@ -3,6 +3,10 @@
 @import "reset";
 @import "variables";
 @import "mixins";
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: $scrollPadding;
+}
 
 body {
     font-family: "Mulish", sans-serif;
@@ -13,7 +17,6 @@ body {
     overflow: clip;
     display: flex;
     flex-direction: column;
-    scroll-behavior: smooth;
 }
 .wrapper > main {
     flex-grow: 1;

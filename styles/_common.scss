@@ -87,7 +87,7 @@
 .content-block {
     background-color: $beigeColor;
     &__wrapper {
-        padding: toRem(120) toPercent(113, 683);
+        padding: toRem(120) toRem(113);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -116,6 +116,36 @@
         @media (max-width: $smallMobile) {
             font-size: toRem(14);
             line-height: 1.28;
+        }
+    }
+    //animations
+    &._animated .content-block__header,
+    &._animated .content-block__text,
+    &._animated .button {
+        will-change: transform, opacity;
+        transform: translateY(50%);
+        opacity: 0;
+        transition-property: transform, opacity;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+    }
+    &._animated .content-block__text {
+        transition-delay: 0.1s;
+    }
+    &._animated .button {
+        transition-delay: 0.2s;
+    }
+    &._animated._show .content-block__header,
+    &._animated._show .content-block__text,
+    &._animated._show .button {
+        transform: translate(0);
+        opacity: 1;
+    }
+    &.content-block .button {
+        &._animated {
+            transition:
+                transform 0.5s 0.1s,
+                opacity 0.5s 0.1s;
         }
     }
 }

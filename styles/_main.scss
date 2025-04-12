@@ -20,7 +20,7 @@
         flex-direction: column;
         background-color: $beigeColor;
     }
-    &__container {
+    &__container-max {
         padding-block-start: toRem(64);
         @media (max-width: $mobile) {
             padding-block-start: 0;
@@ -70,7 +70,6 @@
     &__content {
         position: relative;
         z-index: 2;
-        // left: toRem(-28);
         color: #ffffff;
         background-color: transparent;
         & .content-block__wrapper {
@@ -88,6 +87,19 @@
         & .content-block__header {
             font-size: toRem(48);
             line-height: 1.18;
+            &._animated {
+                will-change: transform, opacity;
+                transform: translate(-30%, -30%);
+                opacity: 0;
+                transition:
+                    transform 0.5s,
+                    opacity 0.5s;
+            }
+            &._animated._show {
+                transform: translate(0);
+                opacity: 1;
+            }
+
             @media (max-width: $mobile) {
                 font-size: toRem(32);
                 line-height: 1.25;
@@ -112,15 +124,6 @@
                 &:not(:last-child) {
                     margin-bottom: toRem(2);
                 }
-            }
-        }
-        &.content-block .button {
-            @media (max-width: $mobile) {
-                padding-block: toRem(21);
-                width: 100%;
-                background-color: $greenColor;
-                color: #ffffff;
-                font-size: toRem(16);
             }
         }
 
@@ -160,6 +163,27 @@
     // .brands__item
 
     &__item {
+        @media (min-width: $mobile) {
+            &._animated {
+                will-change: transform, opacity;
+                transform: scale(0);
+                opacity: 0;
+                transition-property: transform, opacity;
+                transition-duration: 0.6s;
+                transition-timing-function: ease-in-out;
+            }
+
+            @for $i from 1 through 5 {
+                .swiper-slide:nth-child(#{$i}) &._animated {
+                    transition-delay: #{$i * 0.2} + "s";
+                }
+            }
+            &._animated._show {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
         & .brand-card__text {
             @media (max-width: $mobile) {
                 max-width: toRem(304);
@@ -259,11 +283,13 @@
 
     &__content {
         min-height: 100%;
+
         & .content-block__text {
             &:not(:last-child) {
                 margin-bottom: toRem(15);
             }
         }
+
         @media (max-width: $mobile) {
             & .content-block__wrapper {
                 padding: toRem(35) toPercent(97, 683) toRem(73);
@@ -511,7 +537,22 @@
         position: relative;
         overflow: hidden;
         will-change: transform;
-        transition: transform 0.3s;
+        transition-property:  opacity, border-radius;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.5s;
+        @for $i from 1 through 6 {
+            &:nth-child(#{$i + 1}) {
+                transition-delay: #{$i * 0.2} + "s";
+            }
+        }
+        .collage._animated & {
+            border-radius: 20%;
+            opacity: 0.5;
+        }
+        .collage._animated._show & {
+            border-radius: 0%;
+            opacity: 1;
+        }
         &:focus-within {
             outline: auto;
         }
@@ -797,7 +838,6 @@
         background-color: transparent;
 
         & .content-block__wrapper {
-            padding-inline: toRem(55);
             padding-block: toRem(72);
             @media (max-width: $mobile) {
                 padding-block: toRem(60);
